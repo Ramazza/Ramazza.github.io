@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora | Matheus Ramazza</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./calculator.png">
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <div class="main-container">
+        
+        <div class="container">
+            <div class="title">
+                <a class="icon"></a>
+                <h5 class="icon-title">Calculadora</h5>
+                <div class="title-buttons">
+                    <button class="title-button minimize" id="exit" onclick="">−</button>
+                    <button class="title-button maximize" id="MC" onclick="">□</button>
+                    <button class="title-button exit" id="MC" onclick="">✕</button>
+                </div>
+                
+            </div>
+            <div class="display-top">
+                <button class="dropdown-button" id="dropdown" onclick="">☰</button>
+                <h4 class="padrao">Padrão</h4>
+                <button class="sla" id="sla" onclick=""></button>
+                <div class="end-button">
+                    <button class="historico" id="historico" onclick=""></button>
+                </div>
+            </div>
+            <input class="display-conta" type="text" id="display-conta" disabled>
+            <input class="display" type="text" id="display" value="0" disabled>
+
+            <div class="memory-buttons">
+                <button class="memory-button memory-button1" id="MC" onclick="">MC</button>
+                <button class="memory-button memory-button1" id="MR" onclick="">MR</button>
+                <button class="memory-button memory-button2" id="M+" onclick="">M+</button>
+                <button class="memory-button memory-button2" id="M-" onclick="">M-</button>
+                <button class="memory-button memory-button2" id="MS" onclick="">MS</button>
+                <button class="memory-button memory-button1" id="M" onclick="">M˅</button>
+            </div>
+
+            <div class="buttons">
+                <button class="button button2" id="%" onclick="">%</button>
+                <button class="button button2" id="CE" onclick="ce()">CE</button>
+                <button class="button button2" id="C" onclick="c()">C</button>
+                <button class="button button2" id="cancel" onclick="removeLast()">⌫</button>
+                <button class="button" id="⅟x" onclick="divPorX()">⅟x</button>
+                <button class="button" id="x²" onclick="elevado()">x²</button>
+                <button class="button" id="√x" onclick="raizQuadrada()">√x</button>
+                <button class="button button2" id="÷" onclick="operacao(this.id)">÷</button>
+                <button class="button" id="7" onclick="buttonPress(this.id)">7</button>
+                <button class="button" id="8" onclick="buttonPress(this.id)">8</button>
+                <button class="button" id="9" onclick="buttonPress(this.id)">9</button>
+                <button class="button button2" id="x" onclick="operacao(this.id)">×</button>
+                <button class="button" id="4" onclick="buttonPress(this.id)">4</button>
+                <button class="button" id="5" onclick="buttonPress(this.id)">5</button>
+                <button class="button" id="6" onclick="buttonPress(this.id)">6</button>
+                <button class="button button2" id="-" onclick="operacao(this.id)">-</button>
+                <button class="button" id="1" onclick="buttonPress(this.id)">1</button>
+                <button class="button" id="2" onclick="buttonPress(this.id)">2</button>
+                <button class="button" id="3" onclick="buttonPress(this.id)">3</button>
+                <button class="button soma" id="+" onclick="operacao(this.id)">+</button>
+                <button class="button" id="+⁄-" onclick="maisMenos()">+⁄-</button>
+                <button class="button" id="0" onclick="buttonPress(this.id)">0</button>
+                <button class="button" id="." onclick="buttonPress(this.id)">,</button>
+                <button class="button button3" id="=" onclick="calcular(this.id)">=</button>
+            </div>
+        </div>
+    </div>    
+
+    <div class="to-do">
+        <h1>To do:</h1>
+        - Bug quando tem valor no display e no display-conta e aperta = (aqui tem q manter a operação e ir fazendo 
+        ela novamente) isso tem que adicionar na função calcular
+        <br>
+        - Adicionar coisa para quando se usa as novas utilidades e se aperta uma nova operação 
+        (quebra pq coloca coisa no display-conta)
+        <br>
+        - Fazer o dropdown
+        <br>
+        - Usar o teclado como input ou clicar nos botões
+    </div>
+    
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
